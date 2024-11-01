@@ -1,17 +1,12 @@
-# **DES Project - PiRacer Assembly** (PiRacer / PiRacerPro / PiRacerEvo / PiRacerMicro)
+# **DES Project - PiRacer Assembly** 
 
-- [**DES Project - PiRacer Assembly** (PiRacer / PiRacerPro / PiRacerEvo / PiRacerMicro)](#des-project---piracer-assembly-piracer--piracerpro--piracerevo--piracermicro)
+- **DES Project - PiRacer Assembly** (PiRacer)
   - [Introduction](#introduction)
   - [Project Description](#project-description)
   - [Project Goals and Objectives](#project-goals-and-objectives)
   - [Project Requirements](#project-requirements)
-  - [Project Timeline](#project-timeline)
-  - [Project Assessment](#project-assessment)
-  - [Collaboration and Teamwork](#collaboration-and-teamwork)
-  - [Mentorship and Support](#mentorship-and-support)
-  - [Reflection and Self-Assessment](#reflection-and-self-assessment)
-  - [Submission](#submission)
-  - [Evaluation Form](#evaluation-form)
+  - [Installation](#installation)
+
 
 ## Introduction
 
@@ -42,50 +37,33 @@ The PiRacer is a compact, single-board computer-based racing car that uses the R
 * Any other necessary components, as specified in the kit guide  
 </br>
 
-## Project Timeline
+## Installations
 
-The project will be completed over the course of one week, with regular check-ins and progress reports to be submitted to the instructor. The following is a rough timeline of key dates:
+### PiRacer Library
+Check the following repository: https://github.com/SEA-ME/piracer_py
 
-* Day 1: Introduction to the project and team formation
+### I2C Communication
+- How to Enable I2C:
+```bash
+$ sudo raspi-config (select Interfacing Options)
+$ Enable I2C
+$ reboot
+```
+- How can I check which I2C port we are using?
 
-* Day 2-3: Assembling and testing the PiRacer
+```bash
+$ i2cdetect -y 1
+```
 
-* Day 4-5: Programming and testing the PiRacer
+### DSI Screen Installation:
+Waveshare 7.9 inch Screen: Download the Driver_package and script from here(https://github.com/waveshareteam/Waveshare-DSI-LCD) and run the script in RPi
 
-* Day 6: Final presentation and evaluation  
-</br>
+### Cross Compile for RPi on Ubuntu Build Machine
+Cross Compilation: Check the Cross-Compile-Qt6-for-RPi
 
-## Project Assessment
+### Waveshare 2-CH CAN FD HAT
+Follow the instructions:
+https://www.waveshare.com/wiki/2-CH_CAN_FD_HAT
 
-The project will be evaluated based on the following criteria:
-
-* Quality of the assembled PiRacer
-* Completion of all project requirements
-* Successful testing of the PiRacer
-* Effective use of technology and programming languages
-* Teamwork and collaboration skills  
-</br>
-
-## Collaboration and Teamwork
-
-Students will be working in teams of maximum four to complete this project. Each team member will be assigned specific tasks and responsibilities, and will be expected to contribute to the overall success of the project. Teams will be required to submit regular progress reports and to meet with the instructor for check-ins and feedback.  
-</br>
-
-## Mentorship and Support
-
-Students will be provided with mentorship and support from the instructor throughout the project. The instructor will be available for questions and guidance, and will hold regular check-ins and progress reports to provide feedback and support.  
-</br>
-
-## Reflection and Self-Assessment
-
-Students will be encouraged to reflect on their own learning and progress throughout the project. This will be done through self-assessment exercises and through feedback from the instructor and other team members.  
-</br>
-
-## Submission
-
-Turn in a github repository with following information:
-1. A complete step by step guide of "How to assemble and setup PiRacer" with necessary information on all possible parts.
-</br>
-
-## Evaluation Form
-> Fill in this [Evaluation Form DES-PiRacer-Assembly](https://docs.google.com/forms/d/e/1FAIpQLSdpjdmAQSzFG3zKjywbLSGoWT4pVMkPEB1XLC57b612oXBbgQ/viewform?usp=sf_link). **You need to collect 2 feedbacks from 2 peers from other than your own team**.
+### Seeed Studio Arduino CAN Library
+https://github.com/Seeed-Studio/Seeed_Arduino_CAN
